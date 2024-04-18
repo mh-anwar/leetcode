@@ -1,4 +1,4 @@
-# 1. Two Sum
+# 1. Two Sum (Grind75 #1)
 # 2024-04-17
 
 # Approach
