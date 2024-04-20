@@ -37,30 +37,28 @@ class Solution:
         return head.next
     
 
-# First Attempt
+    # First attempt - failed recursive method
+    def insertNode(node, listHead):
+        if node.val < listHead.val:
+            # Go to next
+            return insertNode(node, listHead.next)
+        elif node.val >= listHead.val:
+            if node.val <= listHead.next.val:
+                node.next = listHead.next
+                listHead.next = node
+                print(listHead)
+                return listHead
+                
+    def loopThru(node, firstList):
+        if (node is not None) and (firstList is not None):
+            print( firstList.val)
+            firstList = insertNode(node, firstList)
+            return loopThru(node.next, firstList)
+        else:
+            return firstList
 
-"""         
-def insertNode(node, listHead):
-    if node.val < listHead.val:
-        # Go to next
-        return insertNode(node, listHead.next)
-    elif node.val >= listHead.val:
-        if node.val <= listHead.next.val:
-            node.next = listHead.next
-            listHead.next = node
-            print(listHead)
-            return listHead
-            
-def loopThru(node, firstList):
-    if (node is not None) and (firstList is not None):
-        print( firstList.val)
-        firstList = insertNode(node, firstList)
-        return loopThru(node.next, firstList)
-    else:
-        return firstList
-
-if (list1 is not None) and (list2 is not None):
-    final = loopThru(list2, list1)
-    return final
-return ListNode() 
-"""
+    if (list1 is not None) and (list2 is not None):
+        final = loopThru(list2, list1)
+        return final
+    return ListNode() 
+    
