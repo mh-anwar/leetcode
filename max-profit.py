@@ -7,6 +7,8 @@
 # Third attempt: reverse loop through the stock prices, and only keep track of the maximum - Beats 81.61%
 # anything less should be used to calculate the profit, if it's higher than the max profit then 
 # set it as the max profit. Anything greater than the max price should be the new max price
+
+# Complexity
 # Time: O(n)
 
 class Solution:
