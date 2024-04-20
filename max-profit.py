@@ -2,12 +2,13 @@
 # 2024-04-19
 
 # Approach
-# First attempt TLE'd with O(n^2)
-# Second attempt uses left and right pointers - accepted
-
-# Third attempt: reverse loop through the stock prices, and only keep track of the maximum
+# First attempt: TLE'd with O(n^2)
+# Second attempt: use left and right pointers to find max profit - Beats 63.10%
+# Third attempt: reverse loop through the stock prices, and only keep track of the maximum - Beats 81.61%
 # anything less should be used to calculate the profit, if it's higher than the max profit then 
 # set it as the max profit. Anything greater than the max price should be the new max price
+# Time: O(n)
+
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         maxPrice = prices[-1]
