@@ -7,6 +7,9 @@
 # Third attempt: clean string, reverse it and compare with original - beats 51.54%
 # Final attempt: clean string with RegEx, reverse and compare with original - beats 86.00% 
 
+# Complexity
+# Time: O(n)
+
 import re
 class Solution:
     def isPalindrome(self, s: str) -> bool:
