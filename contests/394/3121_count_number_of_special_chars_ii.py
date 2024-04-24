@@ -2,7 +2,7 @@
 # 2024-04-21
 
 # Approach
-# 
+# This is a really messy and not well put solution that simply handles each edge case one by one
 
 # Complexity
 # Time: O(n)
@@ -12,11 +12,8 @@ class Solution:
         # while checking if an uppercase appears
         occurences = {}
         special = 0
-        # print(word)
         for i in word:
-            # print(occurences)
             if i.islower() and i in occurences: 
-                # print(i + ": " + str(occurences[i]["upper"]))
                 if occurences[i]["upper"] == True and occurences[i]["lower"] == True:
                     occurences[i]["lower"] = False
                     print(str(i) + ' doesnt count ' + str(special) )
